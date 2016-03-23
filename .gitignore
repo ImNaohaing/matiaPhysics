@@ -45,3 +45,16 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.exe
+*.ilk
+bullet3/bin/app_basicexample_vs2010_x64_debug.pdb
+*.pdb
+bullet3/bin/Bullet3Collision_vs2010_x64_debug.lib
+*.lib
+*.tlog
+bullet3/build3/vs2010/obj/x64/Debug/App_ExampleBrowser/BasicExample.obj
+*.obj
+*.log
+*.sdf
+*.opensdf
+*.idb

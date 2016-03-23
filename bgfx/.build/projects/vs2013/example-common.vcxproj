@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{21CC0E26-BF62-11E2-A01E-0291BD4C8125}</ProjectGuid>
+    <RootNamespace>example-common</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\win32_vs2013\bin\</OutDir>
+    <IntDir>..\..\win32_vs2013\obj\x32\Debug\example-common\</IntDir>
+    <TargetName>example-commonDebug</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\win64_vs2013\bin\</OutDir>
+    <IntDir>..\..\win64_vs2013\obj\x64\Debug\example-common\</IntDir>
+    <TargetName>example-commonDebug</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\win32_vs2013\bin\</OutDir>
+    <IntDir>..\..\win32_vs2013\obj\x32\Release\example-common\</IntDir>
+    <TargetName>example-commonRelease</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\win64_vs2013\bin\</OutDir>
+    <IntDir>..\..\win64_vs2013\obj\x64\Release\example-common\</IntDir>
+    <TargetName>example-commonRelease</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/Oy- /Ob2  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\bx\include\compat\msvc;..\..\..\..\bx\include;..\..\..\include;..\..\..\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BX_CONFIG_ENABLE_MSVC_LEVEL4_WARNINGS=1;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_WIN32;_HAS_EXCEPTIONS=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE=0;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)example-commonDebug.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BX_CONFIG_ENABLE_MSVC_LEVEL4_WARNINGS=1;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_WIN32;_HAS_EXCEPTIONS=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE=0;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\bx\include\compat\msvc;..\..\..\..\bx\include;..\..\..\include;..\..\..\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)example-commonDebug.lib</OutputFile>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>/Oy- /Ob2  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\bx\include\compat\msvc;..\..\..\..\bx\include;..\..\..\include;..\..\..\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BX_CONFIG_ENABLE_MSVC_LEVEL4_WARNINGS=1;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_WIN32;_HAS_EXCEPTIONS=0;_SCL_SECURE=0;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)example-commonDebug.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BX_CONFIG_ENABLE_MSVC_LEVEL4_WARNINGS=1;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_WIN32;_HAS_EXCEPTIONS=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE=0;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\bx\include\compat\msvc;..\..\..\..\bx\include;..\..\..\include;..\..\..\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)example-commonDebug.lib</OutputFile>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/Oy- /Ob2  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\bx\include\compat\msvc;..\..\..\..\bx\include;..\..\..\include;..\..\..\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BX_CONFIG_ENABLE_MSVC_LEVEL4_WARNINGS=1;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_WIN32;_HAS_EXCEPTIONS=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE=0;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)example-commonRelease.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BX_CONFIG_ENABLE_MSVC_LEVEL4_WARNINGS=1;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_WIN32;_HAS_EXCEPTIONS=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE=0;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\bx\include\compat\msvc;..\..\..\..\bx\include;..\..\..\include;..\..\..\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)example-commonRelease.lib</OutputFile>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>/Oy- /Ob2  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\bx\include\compat\msvc;..\..\..\..\bx\include;..\..\..\include;..\..\..\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BX_CONFIG_ENABLE_MSVC_LEVEL4_WARNINGS=1;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_WIN32;_HAS_EXCEPTIONS=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE=0;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)example-commonRelease.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BX_CONFIG_ENABLE_MSVC_LEVEL4_WARNINGS=1;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_WIN32;_HAS_EXCEPTIONS=0;_HAS_ITERATOR_DEBUGGING=0;_SCL_SECURE=0;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\bx\include\compat\msvc;..\..\..\..\bx\include;..\..\..\include;..\..\..\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)example-commonRelease.lib</OutputFile>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\3rdparty\ib-compress\indexbuffercompression.h" />
+    <ClInclude Include="..\..\..\3rdparty\ib-compress\indexbuffercompressionformat.h" />
+    <ClInclude Include="..\..\..\3rdparty\ib-compress\indexbufferdecompression.h" />
+    <ClInclude Include="..\..\..\3rdparty\ib-compress\indexcompressionconstants.h" />
+    <ClInclude Include="..\..\..\3rdparty\ib-compress\readbitstream.h" />
+    <ClInclude Include="..\..\..\3rdparty\ib-compress\writebitstream.h" />
+    <ClInclude Include="..\..\..\3rdparty\ocornut-imgui\imconfig.h" />
+    <ClInclude Include="..\..\..\3rdparty\ocornut-imgui\imgui.h" />
+    <ClInclude Include="..\..\..\3rdparty\ocornut-imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\..\3rdparty\ocornut-imgui\imgui_wm.h" />
+    <ClInclude Include="..\..\..\3rdparty\ocornut-imgui\memory_editor.h" />
+    <ClInclude Include="..\..\..\3rdparty\ocornut-imgui\stb_rect_pack.h" />
+    <ClInclude Include="..\..\..\3rdparty\ocornut-imgui\stb_textedit.h" />
+    <ClInclude Include="..\..\..\3rdparty\ocornut-imgui\stb_truetype.h" />
+    <ClInclude Include="..\..\..\examples\common\aviwriter.h" />
+    <ClInclude Include="..\..\..\examples\common\bgfx_utils.h" />
+    <ClInclude Include="..\..\..\examples\common\bounds.h" />
+    <ClInclude Include="..\..\..\examples\common\camera.h" />
+    <ClInclude Include="..\..\..\examples\common\common.h" />
+    <ClInclude Include="..\..\..\examples\common\cube_atlas.h" />
+    <ClInclude Include="..\..\..\examples\common\packrect.h" />
+    <ClInclude Include="..\..\..\examples\common\debugdraw\debugdraw.h" />
+    <ClInclude Include="..\..\..\examples\common\debugdraw\fs_debugdraw_fill.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\debugdraw\fs_debugdraw_fill_lit.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\debugdraw\fs_debugdraw_lines.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\debugdraw\fs_debugdraw_lines_stipple.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\debugdraw\vs_debugdraw_fill.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\debugdraw\vs_debugdraw_fill_lit.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\debugdraw\vs_debugdraw_lines.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\debugdraw\vs_debugdraw_lines_stipple.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\entry\cmd.h" />
+    <ClInclude Include="..\..\..\examples\common\entry\dbg.h" />
+    <ClInclude Include="..\..\..\examples\common\entry\entry.h" />
+    <ClInclude Include="..\..\..\examples\common\entry\entry_p.h" />
+    <ClInclude Include="..\..\..\examples\common\entry\input.h" />
+    <ClInclude Include="..\..\..\examples\common\font\font_manager.h" />
+    <ClInclude Include="..\..\..\examples\common\font\fs_font_basic.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\font\fs_font_distance_field.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\font\fs_font_distance_field_subpixel.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\font\text_buffer_manager.h" />
+    <ClInclude Include="..\..\..\examples\common\font\text_metrics.h" />
+    <ClInclude Include="..\..\..\examples\common\font\utf8.h" />
+    <ClInclude Include="..\..\..\examples\common\font\vs_font_basic.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\font\vs_font_distance_field.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\font\vs_font_distance_field_subpixel.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\droidsans.ttf.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\fs_imgui_color.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\fs_imgui_cubemap.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\fs_imgui_image.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\fs_imgui_image_swizz.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\fs_imgui_latlong.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\fs_imgui_texture.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\fs_ocornut_imgui.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\imgui.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\ocornut_imgui.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\scintilla.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\vs_imgui_color.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\vs_imgui_cubemap.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\vs_imgui_image.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\vs_imgui_latlong.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\vs_imgui_texture.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\imgui\vs_ocornut_imgui.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\nanovg\fontstash.h" />
+    <ClInclude Include="..\..\..\examples\common\nanovg\fs_nanovg_fill.bin.h" />
+    <ClInclude Include="..\..\..\examples\common\nanovg\nanovg.h" />
+    <ClInclude Include="..\..\..\examples\common\nanovg\vs_nanovg_fill.bin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\3rdparty\ib-compress\indexbuffercompression.cpp">
+      <ObjectFileName>$(IntDir)3rdparty\ib-compress\indexbuffercompression.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\3rdparty\ib-compress\indexbufferdecompression.cpp">
+      <ObjectFileName>$(IntDir)3rdparty\ib-compress\indexbufferdecompression.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\3rdparty\ocornut-imgui\imgui.cpp">
+      <ObjectFileName>$(IntDir)3rdparty\ocornut-imgui\imgui.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\3rdparty\ocornut-imgui\imgui_demo.cpp">
+      <ObjectFileName>$(IntDir)3rdparty\ocornut-imgui\imgui_demo.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\3rdparty\ocornut-imgui\imgui_draw.cpp">
+      <ObjectFileName>$(IntDir)3rdparty\ocornut-imgui\imgui_draw.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\3rdparty\ocornut-imgui\imgui_node_graph_test.cpp">
+      <ObjectFileName>$(IntDir)3rdparty\ocornut-imgui\imgui_node_graph_test.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\3rdparty\ocornut-imgui\imgui_wm.cpp">
+      <ObjectFileName>$(IntDir)3rdparty\ocornut-imgui\imgui_wm.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\bgfx_utils.cpp">
+      <ObjectFileName>$(IntDir)examples\common\bgfx_utils.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\bounds.cpp">
+      <ObjectFileName>$(IntDir)examples\common\bounds.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\camera.cpp">
+      <ObjectFileName>$(IntDir)examples\common\camera.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\cube_atlas.cpp">
+      <ObjectFileName>$(IntDir)examples\common\cube_atlas.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\debugdraw\debugdraw.cpp">
+      <ObjectFileName>$(IntDir)examples\common\debugdraw\debugdraw.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\cmd.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\cmd.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\dbg.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\dbg.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\entry.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\entry.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\entry_android.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\entry_android.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\entry_asmjs.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\entry_asmjs.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\entry_glfw.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\entry_glfw.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\entry_nacl.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\entry_nacl.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\entry_noop.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\entry_noop.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\entry_sdl.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\entry_sdl.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\entry_windows.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\entry_windows.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\entry_winrt.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\entry_winrt.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\entry_x11.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\entry_x11.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\entry\input.cpp">
+      <ObjectFileName>$(IntDir)examples\common\entry\input.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\font\font_manager.cpp">
+      <ObjectFileName>$(IntDir)examples\common\font\font_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\font\text_buffer_manager.cpp">
+      <ObjectFileName>$(IntDir)examples\common\font\text_buffer_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\font\text_metrics.cpp">
+      <ObjectFileName>$(IntDir)examples\common\font\text_metrics.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\font\utf8.cpp">
+      <ObjectFileName>$(IntDir)examples\common\font\utf8.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\imgui\imgui.cpp">
+      <ObjectFileName>$(IntDir)examples\common\imgui\imgui.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\imgui\ocornut_imgui.cpp">
+      <ObjectFileName>$(IntDir)examples\common\imgui\ocornut_imgui.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\imgui\scintilla.cpp">
+      <ObjectFileName>$(IntDir)examples\common\imgui\scintilla.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\nanovg\nanovg.cpp">
+      <ObjectFileName>$(IntDir)examples\common\nanovg\nanovg.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\common\nanovg\nanovg_bgfx.cpp">
+      <ObjectFileName>$(IntDir)examples\common\nanovg\nanovg_bgfx.obj</ObjectFileName>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
