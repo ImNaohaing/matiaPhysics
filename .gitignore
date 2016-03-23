@@ -58,3 +58,5 @@ bullet3/build3/vs2010/obj/x64/Debug/App_ExampleBrowser/BasicExample.obj
 *.sdf
 *.opensdf
 *.idb
+*.sdf
+matiaPhysics.opensdf
